@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IA‑Solution — Accueil</title>
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="IA‑Solution — Agence panafricaine IA‑first. Apps, SaaS et automatisations IA en 72h." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <script>
+    window.tailwind = window.tailwind || {};
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: { navy: '#0b1220', lime: '#4ade80' }
+          },
+          fontFamily: {
+            sans: ['Inter','ui-sans-serif','system-ui','sans-serif'],
+            display: ['Poppins','Inter','ui-sans-serif','system-ui','sans-serif']
+          },
+          dropShadow: { glow: '0 0 20px rgba(74,222,128,.35)'}
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
+  <style>
+    html,body { background:#0b1220; }
+  </style>
+</head>
+<body class="text-white">
+  <!-- Background halos -->
+  <div class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-40 -left-40 h-[60vh] w-[60vh] rounded-full blur-3xl opacity-30" style="background:radial-gradient(ellipse at center, rgba(74,222,128,.45), transparent 60%)"></div>
+    <div class="absolute -bottom-40 -right-40 h-[70vh] w-[70vh] rounded-full blur-3xl opacity-20" style="background:radial-gradient(ellipse at center, rgba(74,222,128,.35), transparent 60%)"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 z-20 backdrop-blur-md bg-black/20">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-3">
+      <a href="/landing" class="flex items-center gap-3 group">
+        <img src="/logo.svg" alt="IA‑Solution" class="h-8 w-auto drop-shadow-glow" />
+        <span class="text-sm font-semibold tracking-wide text-white/80 group-hover:text-white">IA‑Solution</span>
+      </a>
+      <nav class="flex items-center gap-2 text-sm">
+        <a href="/offres" class="hidden sm:inline-flex rounded-md px-3 py-1.5 text-white/80 hover:text-white">Offres</a>
+        <a href="/realisations" class="hidden sm:inline-flex rounded-md px-3 py-1.5 text-white/80 hover:text-white">Réalisations</a>
+        <a href="/equipe" class="hidden sm:inline-flex rounded-md px-3 py-1.5 text-white/80 hover:text-white">Équipe</a>
+        <a href="/pitch" class="hidden md:inline-flex rounded-md px-3 py-1.5 text-white/80 hover:text-white">Pitch Deck</a>
+        <a href="/contact" class="inline-flex items-center rounded-md bg-brand-lime px-3 py-1.5 font-semibold text-black shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="pt-28">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div>
+          <img src="/logo.svg" alt="IA‑Solution" class="h-10 w-auto mb-6 drop-shadow-glow" />
+          <h1 class="font-display text-5xl sm:text-6xl font-bold leading-tight">
+            Nous, on ne code pas plus vite.<br><span class="text-brand-lime drop-shadow-glow">On code plus intelligemment.</span>
+          </h1>
+          <p class="mt-6 text-white/80 text-lg max-w-xl">
+            Produits numériques (apps, portails, SaaS, automatisations IA) livrés en 72h grâce à notre pipeline IA (Windsurf + GPT‑5 + Sonnet).
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="https://wa.me/33758060556" target="_blank" class="inline-flex items-center rounded-lg bg-brand-lime px-5 py-3 font-semibold text-black shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30">Commencer en 72h</a>
+            <a href="/" class="inline-flex items-center rounded-lg border border-white/15 px-5 py-3 font-semibold text-white/90 hover:text-white hover:border-white/30">Voir le Pitch Deck</a>
+          </div>
+          <div class="mt-6 flex items-center gap-3 text-sm text-white/60">
+            <span class="inline-flex h-2 w-2 rounded-full bg-brand-lime"></span>
+            Next.js · Supabase · Nest.js · Docker · Hetzner · Cloudflare
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] rounded-2xl ring-1 ring-white/10 bg-white/[0.02] backdrop-blur-sm shadow-xl shadow-black/20"></div>
+          <div class="absolute -bottom-6 -left-6 hidden md:block h-24 w-24 rounded-xl bg-brand-lime/20 blur-xl"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problématique -->
+  <section class="mt-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="prose prose-invert prose-emerald max-w-none">
+        <h2>Problématique — Lenteurs et coûts</h2>
+      </div>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">Time‑to‑market</h3>
+          <p class="text-white/70">Projets qui s’étirent, opportunités perdues.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">Coûts élevés</h3>
+          <p class="text-white/70">Cloud et prestas qui explosent sans ROI clair.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">Pénurie de talents</h3>
+          <p class="text-white/70">Manque de seniors, qualité inégale, turnover.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">Dette technique</h3>
+          <p class="text-white/70">Specs mouvantes, doc faible, maintenance coûteuse.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">Dépendances</h3>
+          <p class="text-white/70">Vendor lock‑in, architectures peu optimisées.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution -->
+  <section class="mt-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="prose prose-invert prose-emerald max-w-none">
+        <h2>Solution — IA‑First, Delivery 72h</h2>
+      </div>
+      <div class="mt-8 grid gap-6 md:grid-cols-5">
+        <div class="rounded-xl p-4 text-center ring-1 ring-white/10 bg-white/[0.02]"><div class="text-sm text-white/60">1</div><div class="font-semibold">Spécifications</div></div>
+        <div class="rounded-xl p-4 text-center ring-1 ring-white/10 bg-white/[0.02]"><div class="text-sm text-white/60">2</div><div class="font-semibold">Scaffolding</div></div>
+        <div class="rounded-xl p-4 text-center ring-1 ring-white/10 bg-white/[0.02]"><div class="text-sm text-white/60">3</div><div class="font-semibold">Dev assisté IA</div></div>
+        <div class="rounded-xl p-4 text-center ring-1 ring-white/10 bg-white/[0.02]"><div class="text-sm text-white/60">4</div><div class="font-semibold">Tests & Docs</div></div>
+        <div class="rounded-xl p-4 text-center ring-1 ring-white/10 bg-white/[0.02]"><div class="text-sm text-white/60">5</div><div class="font-semibold">CI/CD & Deploy</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Différence -->
+  <section id="difference" class="mt-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="prose prose-invert prose-emerald max-w-none">
+        <h2>Notre différence</h2>
+      </div>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">IA “made in Africa”</h3>
+          <p class="text-white/70">Contexte local multi‑pays, usages réels.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">Stack industrielle</h3>
+          <p class="text-white/70">Next.js, Supabase, Nest.js, Docker.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">Coûts cloud réduits</h3>
+          <p class="text-white/70">Hetzner + Cloudflare, performance & budget.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">Code source livré</h3>
+          <p class="text-white/70">Repos Git, scripts infra, doc, handover.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">IA‑Ops automatisé</h3>
+          <p class="text-white/70">Dev > Test > Doc > Deploy en boucle courte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offres -->
+  <section id="offres" class="mt-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="prose prose-invert prose-emerald max-w-none">
+        <h2>Offres & Tarifs</h2>
+      </div>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="text-xl font-bold">Start — 2 500 €</h3>
+          <ul class="mt-4 list-disc pl-5 text-white/80 text-sm">
+            <li>Landing + API (Nest.js) + DB (Supabase)</li>
+            <li>Auth de base + 1 automation IA</li>
+            <li>Déploiement en 72h</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl p-6 ring-2 ring-brand-lime/60 bg-white/[0.03] shadow-xl shadow-emerald-500/10">
+          <h3 class="text-xl font-bold">Standard — 3 000 €</h3>
+          <ul class="mt-4 list-disc pl-5 text-white/80 text-sm">
+            <li>Dashboard Next.js</li>
+            <li>2‑3 modules métier, intégrations (paiement, email)</li>
+            <li>QA renforcée</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="text-xl font-bold">Premium — 4 000 €</h3>
+          <ul class="mt-4 list-disc pl-5 text-white/80 text-sm">
+            <li>Multi‑tenant, rôles/permissions</li>
+            <li>Paiements (Stripe/Paystack), analytics</li>
+            <li>Performance & sécurité</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-6 text-sm text-white/70">Maintenance: 200 €/mois (mises à jour, backups, monitoring, optimisation coûts)</div>
+    </div>
+  </section>
+
+  <!-- Réalisations -->
+  <section id="realisations" class="mt-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="prose prose-invert prose-emerald max-w-none">
+        <h2>Cas d’usage</h2>
+      </div>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">Portail de jeux IA</h3>
+          <p class="text-white/70">10 000 joueurs · mini‑jeux génératifs · scoring temps réel.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">App e‑learning IA</h3>
+          <p class="text-white/70">Cours/quiz génératifs, suivi de progression, mobile‑first.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">Dashboard cloud PME</h3>
+          <p class="text-white/70">Facturation/stock, graphiques, coûts Hetzner optimisés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Équipe -->
+  <section id="equipe" class="mt-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="prose prose-invert prose-emerald max-w-none">
+        <h2>Équipe</h2>
+      </div>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">Benji — Founder & Lead Dev</h3>
+          <p class="text-white/70">Produit, architecture, qualité, delivery.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">IA (GPT‑5 & Windsurf)</h3>
+          <p class="text-white/70">Spécs, code, tests, doc et CI/CD 24/7.</p>
+        </div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]">
+          <h3 class="font-semibold">Réseau d’experts</h3>
+          <p class="text-white/70">UX, QA, data et cloud — scalable à la mission.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="mt-24 mb-24">
+    <div class="mx-auto max-w-7xl px-6">
+      <div class="prose prose-invert prose-emerald max-w-none">
+        <h2>Contact & CTA</h2>
+      </div>
+      <div class="mt-6 grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]"><div class="text-white/60 text-sm">Site</div><div class="font-semibold"><a href="https://www.ia-solution.fr" target="_blank" class="hover:text-brand-lime">ia-solution.fr</a></div></div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]"><div class="text-white/60 text-sm">Email</div><div class="font-semibold"><a href="mailto:contact@ia-solution.fr" class="hover:text-brand-lime">contact@ia-solution.fr</a></div></div>
+        <div class="rounded-2xl p-6 ring-1 ring-white/10 bg-white/[0.02]"><div class="text-white/60 text-sm">WhatsApp / Tel</div><div class="font-semibold"><a href="https://wa.me/33758060556" target="_blank" class="hover:text-brand-lime">+33 7 58 06 05 56</a></div></div>
+      </div>
+      <div class="mt-8">
+        <a href="https://wa.me/33758060556" target="_blank" class="inline-flex items-center rounded-lg bg-brand-lime px-6 py-3 font-semibold text-black shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30">Construisons l’Afrique numérique, ensemble.</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-white/10 py-8 text-center text-white/60 text-sm">
+    © IA‑Solution — 2025. Tous droits réservés.
+  </footer>
+</body>
+</html>
