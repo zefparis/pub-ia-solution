@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IA‑Solution — Pitch Deck</title>
+  <meta name="color-scheme" content="dark" />
+  <meta name="description" content="IA‑Solution — Agence panafricaine d’ingénierie logicielle IA‑first. Produits numériques en 72h." />
+  <!-- Reveal.js core styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme" />
+  <!-- Syntax highlight theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/monokai.css" />
+  <style>
+    :root {
+      --r-background-color: #0b1220;
+      --r-main-font: Inter, Ubuntu, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      --r-main-color: #ffffff;
+      --r-heading-font: Poppins, Inter, Ubuntu, system-ui, sans-serif;
+      --r-heading-color: #ffffff;
+      --r-link-color: #4ade80;
+      --r-link-color-dark: #22c55e;
+      --r-selection-background-color: #4ade80;
+      --r-selection-color: #0b1220;
+    }
+    .reveal { color: var(--r-main-color); }
+    .reveal strong { color: #4ade80; font-weight: 700; }
+    .reveal .slides { text-align: left; }
+    .reveal section img { background: transparent; border: none; box-shadow: none; }
+    .reveal a { text-decoration: none; border-bottom: 1px dashed rgba(74,222,128,0.6); }
+    .reveal h1, .reveal h2, .reveal h3 { letter-spacing: 0.2px; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Charge le Markdown du deck, séparateur horizontal `---` -->
+      <section data-markdown="deck.md"
+               data-separator="^---$"
+               data-separator-notes="^Note:" data-charset="utf-8">
+      </section>
+    </div>
+  </div>
+
+  <!-- Reveal.js core -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
+  <!-- Plugins officiels -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+  <!-- Mermaid runtime -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+
+  <script>
+    // Convertit les blocs ```mermaid en <div class="mermaid"> pour un rendu fiable
+    function upgradeMermaidCodeBlocks() {
+      const blocks = document.querySelectorAll('pre code.language-mermaid, pre code.mermaid');
+      blocks.forEach(code => {
+        const pre = code.closest('pre');
+        if (!pre) return;
+        const parent = pre.parentElement;
+        const container = document.createElement('div');
+        container.className = 'mermaid';
+        container.textContent = code.textContent;
+        parent.replaceChild(container, pre);
+      });
+    }
+
+    // Configuration Mermaid (thème sombre brand)
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: 'dark',
+      themeVariables: {
+        primaryColor: '#0b1220',
+        primaryTextColor: '#ffffff',
+        primaryBorderColor: '#4ade80',
+        lineColor: '#4ade80',
+        secondaryColor: '#0b1220'
+      }
+    });
+
+    // Initialisation Reveal
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      transition: 'slide',
+      backgroundTransition: 'fade',
+      plugins: [ RevealMarkdown, RevealHighlight ]
+    });
+
+    // Rendu Mermaid après chargement du Markdown par Reveal
+    Reveal.on('ready', () => {
+      upgradeMermaidCodeBlocks();
+      mermaid.run();
+    });
+    Reveal.on('slidechanged', () => {
+      // Rendu pour les slides paresseusement chargées
+      mermaid.run();
+    });
+  </script>
+</body>
+</html>
