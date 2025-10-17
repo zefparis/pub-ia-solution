@@ -56,7 +56,9 @@
     .reveal .slides { text-align: left; }
     .reveal section img { background: transparent; border: none; box-shadow: none; }
     .reveal a { text-decoration: none; border-bottom: 1px dashed rgba(74,222,128,0.6); }
-    .reveal h1, .reveal h2, .reveal h3 { letter-spacing: 0.2px; }
+    .reveal h1, .reveal h2, .reveal h3 { letter-spacing: normal; text-transform: none !important; }
+    .reveal h1 { font-size: clamp(2.2rem, 5vw, 3.25rem); line-height: 1.1; letter-spacing: -0.02em; }
+    .reveal h2 { font-size: clamp(1.6rem, 3.8vw, 2.25rem); line-height: 1.2; letter-spacing: -0.015em; }
     /* Reveal UI brand */
     .reveal .progress span { background: #4ade80 !important; }
     .reveal .controls .navigate-left,
@@ -105,7 +107,7 @@
         <div class="mx-auto max-w-6xl min-h-[85vh] px-8 py-20 grid place-content-center">
           <div class="text-white">
             <img src="/logo.svg" alt="IA‑Solution" class="h-12 w-auto mb-6 drop-shadow-glow" />
-            <h1 class="font-display text-5xl sm:text-6xl font-bold leading-tight">
+            <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight">
               Nous, on ne code pas plus vite.<br />
               <span class="text-brand-lime drop-shadow-glow">On code plus intelligemment.</span>
             </h1>
@@ -162,13 +164,17 @@
         // Skip containers that hold nested sections (not real slides)
         if (sec.querySelector(':scope > section')) return;
         sec.classList.add(
-          'prose', 'prose-invert', 'prose-emerald', 'max-w-5xl', 'mx-auto',
-          'leading-relaxed', 'sm:prose-lg', 'lg:prose-xl'
+          'prose', 'prose-invert', 'prose-emerald', 'max-w-4xl', 'mx-auto',
+          'leading-relaxed', 'sm:prose-base', 'lg:prose-lg',
+          'prose-headings:font-display',
+          'prose-h1:text-3xl', 'md:prose-h1:text-4xl', 'lg:prose-h1:text-5xl',
+          'prose-h2:text-2xl', 'md:prose-h2:text-3xl',
+          'prose-p:text-[1.02rem]'
         );
         // Wrap content once in a glass card
         if (!sec.dataset.cardWrapped) {
           const wrapper = document.createElement('div');
-          wrapper.className = 'backdrop-blur-sm bg-white/[0.02] ring-1 ring-white/10 rounded-2xl p-8 md:p-10 shadow-xl shadow-black/20';
+          wrapper.className = 'backdrop-blur-sm bg-white/[0.02] ring-1 ring-white/10 rounded-2xl p-6 md:p-8 shadow-lg shadow-black/20';
           while (sec.firstChild) wrapper.appendChild(sec.firstChild);
           sec.appendChild(wrapper);
           sec.dataset.cardWrapped = 'true';
